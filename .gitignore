@@ -1,6 +1,5 @@
-### Terraform template
 # Local .terraform directories
-**/.terraform/*
+.terraform/
 
 # .tfstate files
 *.tfstate
@@ -12,13 +11,13 @@ crash.*.log
 
 # Exclude all .tfvars files, which are likely to contain sensitive data, such as
 # password, private keys, and other secrets. These should not be part of version
-# control as they are data points which are potentially sensitive and subject
+# control as they are data points that are potentially sensitive and subject
 # to change depending on the environment.
 *.tfvars
 *.tfvars.json
 
-# Ignore override files as they are usually used to override resources locally and so
-# are not checked in
+# Ignore override files as they are usually used for local testing and contain
+# sensitive data.
 override.tf
 override.tf.json
 *_override.tf
@@ -29,11 +28,23 @@ override.tf.json
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
+tfplan*
 
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
 
-### Jetbrains Missing template
-.idea
-.iml
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code specific files (already included, ensuring it's comprehensive)
+.vscode/
+
+# temporary and intermedeate files
+*.bak
+*.tmp
+*.log
+*~
