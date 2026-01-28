@@ -3,6 +3,12 @@ variable "base_name" {
   type        = string
 }
 
+variable "namespace" {
+  description = "The namespace this probe is deployed to, defaults to 'default'"
+  type        = string
+  default     = "default"
+}
+
 variable "module" {
   description = "The Blackbox Exporter module to use (e.g., http_2xx, tcp_connect)."
   type        = string
